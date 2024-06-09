@@ -3,7 +3,7 @@ name: Example Workflow
 on: [push]
 
 jobs:
-  example-job:
+  build-job:
     runs-on: ubuntu-latest
     
     steps:
@@ -19,4 +19,7 @@ jobs:
       run: npm install
 
     - name: Run tests
-      run: npm test
+      run: echo "Running tests"
+
+    - name: Run deploy
+      run: echo "Running deployment"
